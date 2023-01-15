@@ -7,3 +7,4 @@
 #include "snake.h"
 #include "board.h"
 #include "apple.h"
+#include "game.h"
