@@ -1,0 +1,17 @@
+.idea/
+.vscode/
+.vs/
+cmake-build-debug/
+bin/
+build/
+out/
+CMakeSettings.json
+
+CMakeFiles/
+CSnake
+CMakeCache.txt
+_deps/
+cmake_install.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+Makefile
