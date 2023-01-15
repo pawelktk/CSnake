@@ -1,6 +1,6 @@
 # CSnake
 
-<img align="left" src="https://github.com/raysan5/pawelktk/blob/main/img/snake.png" width="288px">
+<img align="left" src="https://github.com/pawelktk/blob/main/img/snake.png" width="288px">
 
 **CSnake is a Snake clone written in C.**
 
