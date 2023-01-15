@@ -7,4 +7,5 @@
 #include "apple.h"
 #include "board.h"
 #include "game.h"
+#include "raylib.h"
 #include "snake.h"

@@ -1,13 +1,4 @@
 #include "main.h"
-#include "board.h"
-#include "game.h"
-#include "raylib.h"
-#include "snake.h"
-/*int main() {
-  game_init();
-  while (1)
-    game_update();
-}*/
 
 #define TILE_SIZE 30
 #define BOARD_SIZE 20
