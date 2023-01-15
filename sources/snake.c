@@ -45,6 +45,7 @@ int snake_next_y() {
     return snake_head->y + 1;
 }
 bool snake_will_collide() {
+//if(snake_next_x()==snake_head->x&&snake_next_y()==snake_head->y) {snake_reverse_direction(); return 0;}
   if ((snake_direction == up && snake_head->x == 0) ||
       (snake_direction == down && snake_head->x == board_size_x - 1) ||
       (snake_direction == left && snake_head->y == 0) ||
@@ -65,6 +66,13 @@ void snake_eat_apple() {
       break;
     }
   }
+}
+
+void snake_reverse_direction() {
+  if(snake_direction==up) snake_direction=down;
+  else if(snake_direction==down) snake_direction=up;
+  else if(snake_direction==right) snake_direction=left;
+  else if(snake_direction==left) snake_direction=right;
 }
 
 void snake_move() {

@@ -22,3 +22,4 @@ bool snake_will_collide() ;
 void snake_eat_apple() ;
 
 void snake_move();
+void snake_reverse_direction();

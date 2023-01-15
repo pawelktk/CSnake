@@ -37,13 +37,13 @@ int main(void) {
       EndDrawing();
       continue;
     }
-    if (IsKeyDown(KEY_RIGHT))
+    if (IsKeyDown(KEY_RIGHT)&&snake_direction!=left)
       snake_direction = right;
-    if (IsKeyDown(KEY_LEFT))
+    if (IsKeyDown(KEY_LEFT)&&snake_direction!=right)
       snake_direction = left;
-    if (IsKeyDown(KEY_UP))
+    if (IsKeyDown(KEY_UP)&&snake_direction!=down)
       snake_direction = up;
-    if (IsKeyDown(KEY_DOWN))
+    if (IsKeyDown(KEY_DOWN)&&snake_direction!=up)
       snake_direction = down;
     BeginDrawing();
     ClearBackground(RAYWHITE);
