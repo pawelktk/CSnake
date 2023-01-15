@@ -4,9 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-
-#include "snake.h"
-#include "board.h"
 #include "apple.h"
+#include "board.h"
 #include "game.h"
+#include "snake.h"

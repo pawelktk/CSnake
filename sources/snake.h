@@ -14,12 +14,12 @@ enum direction { up, down, left, right };
 extern enum direction snake_direction;
 
 void snake_push_head(int x, int y);
-void snake_pop_tail() ;
-void snake_init() ;
-int snake_next_x() ;
-int snake_next_y() ;
-bool snake_will_collide() ;
-void snake_eat_apple() ;
+void snake_pop_tail();
+void snake_init();
+int snake_next_x();
+int snake_next_y();
+bool snake_will_collide();
+void snake_eat_apple();
 
 void snake_move();
 void snake_reverse_direction();

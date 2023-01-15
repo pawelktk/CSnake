@@ -1,7 +1,7 @@
 #include "apple.h"
 
 tile_t free_tiles[300 * 300];
-int free_tiles_count= 0;
+int free_tiles_count = 0;
 apple_t apples[300 * 300];
 int apple_count = 0;
 

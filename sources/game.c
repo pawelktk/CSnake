@@ -1,7 +1,7 @@
 #include "game.h"
 int score = 0;
-bool game_over=0;
-void game_init(int size_x,int size_y) {
+bool game_over = 0;
+void game_init(int size_x, int size_y) {
   srand(time(NULL));
   board_init(size_x, size_y);
   snake_init();
@@ -28,11 +28,11 @@ void game_get_direction() {
 }
 
 void game_update() {
-  //game_get_direction();
+  // game_get_direction();
   if (snake_will_collide()) {
     printf("GAME OVER");
-    game_over=1;
-    //exit(0);
+    game_over = 1;
+    // exit(0);
   }
   snake_eat_apple();
   snake_move();
