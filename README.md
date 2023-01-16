@@ -10,7 +10,7 @@
 
 building
 --------
-raylib graphics library is required. CMake will automatically download it, it takes about 1-3 minutes to build it from sources.
+
 ```bash
 cmake .
 make
