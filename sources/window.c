@@ -1,14 +1,27 @@
 #include "window.h"
 
+bool window_allow_input = 1;
+enum direction window_queued_input = right;
 void window_handle_input() {
-  if (IsKeyDown(KEY_RIGHT) && snake_direction != left)
-    snake_direction = right;
-  if (IsKeyDown(KEY_LEFT) && snake_direction != right)
-    snake_direction = left;
-  if (IsKeyDown(KEY_UP) && snake_direction != down)
-    snake_direction = up;
-  if (IsKeyDown(KEY_DOWN) && snake_direction != up)
-    snake_direction = down;
+
+  if (IsKeyDown(KEY_RIGHT) && snake_direction != left) {
+    window_queued_input = right;
+    window_allow_input = 0;
+  } else if (IsKeyDown(KEY_LEFT) && snake_direction != right) {
+    window_queued_input = left;
+    window_allow_input = 0;
+  } else if (IsKeyDown(KEY_UP) && snake_direction != down) {
+    window_queued_input = up;
+    window_allow_input = 0;
+  } else if (IsKeyDown(KEY_DOWN) && snake_direction != up) {
+    window_queued_input = down;
+    window_allow_input = 0;
+  }
+  // if (window_allow_input==1) window_apply_queued_input();
+}
+void window_apply_queued_input() {
+  snake_direction = window_queued_input;
+  window_allow_input = true;
 }
 
 void window_display_board() {
