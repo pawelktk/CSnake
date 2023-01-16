@@ -17,7 +17,7 @@ int main(void) {
     window_handle_input();
     window_display_board();
     frames++;
-    if (frames == 10) {
+    if (frames == 3) {
       window_apply_queued_input();
       game_update();
       frames = 0;
