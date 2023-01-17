@@ -12,6 +12,8 @@ building
 --------
 
 ```bash
+git clone https://github.com/pawelktk/CSnake.git
+cd CSnake
 cmake .
 make
 ```
