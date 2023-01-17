@@ -1,4 +1,5 @@
 #include "main.h"
+#include "window.h"
 
 int main(void) {
   game_init(BOARD_SIZE, BOARD_SIZE);
@@ -13,11 +14,15 @@ int main(void) {
     if (game_over) {
       window_display_game_over();
       continue;
+    } else if (!menu_game_started) {
+      window_display_menu();
+      window_handle_input_menu();
+      continue;
     }
     window_handle_input();
     window_display_board();
     frames++;
-    if (frames == 3) {
+    if (frames == update_delay) {
       window_apply_queued_input();
       game_update();
       frames = 0;
